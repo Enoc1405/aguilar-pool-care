@@ -24,8 +24,8 @@ export default function GaleriaPage() {
       <SiteHeader />
       <PageHero 
         eyebrow="Working for you" 
-        title={<>El cuidado que tu<br /><em>piscina merece.</em></>} 
-        description="Explora nuestro trabajo y descubre cómo transformamos el cuidado de piscinas." 
+        title={<>The care your<br /><em>pool deserves.</em></>} 
+        description="Explore our work and discover how we transform pool care." 
         image="/aguilar-pool-cleaning.png" 
       />
       
@@ -34,9 +34,9 @@ export default function GaleriaPage() {
           <div className="section-heading">
             <div>
               <span className="kicker">Working for you</span>
-              <h2>Nuestro trabajo en <em>imágenes.</em></h2>
+              <h2>Our work in <em>pictures.</em></h2>
             </div>
-            <p>Una mirada completa a nuestro servicio residencial de mantenimiento y limpieza.</p>
+            <p>A complete look at our residential cleaning and maintenance service.</p>
           </div>
           <div className="photo-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
             {items.map((file, index) => {
@@ -54,7 +54,7 @@ export default function GaleriaPage() {
                   ) : (
                     <img 
                       src={src} 
-                      alt={`Proyecto ${index + 1}`} 
+                      alt={`Project ${index + 1}`} 
                       loading="lazy" 
                       style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', inset: 0 }}
                     />
@@ -69,11 +69,11 @@ export default function GaleriaPage() {
       <section className="cta-strip">
         <div className="container">
           <div>
-            <span className="kicker">¿Listo para relajarte?</span>
-            <h2>Tu piscina en las<br /><em>mejores manos.</em></h2>
+            <span className="kicker">Ready to relax?</span>
+            <h2>Your pool in the<br /><em>best hands.</em></h2>
           </div>
           <a className="button button-primary" href="/contacto">
-            Solicitar presupuesto <ArrowRight size={18} />
+            Request a quote <ArrowRight size={18} />
           </a>
         </div>
       </section>
