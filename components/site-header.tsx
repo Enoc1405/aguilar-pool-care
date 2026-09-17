@@ -7,7 +7,7 @@ export const brandLogo = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.co
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
-  const links = [['/', 'Home'], ['/servicios', 'Services'], ['/nosotros', 'About us'], ['/galeria', 'Gallery'], ['/preguntas', 'FAQ'], ['/contacto', 'Contact']]
+  const links = [['/', 'Home'], ['/servicios', 'Services'], ['/nosotros', 'About us'], ['/galeria', 'Working for you'], ['/preguntas', 'FAQ'], ['/contacto', 'Contact']]
   return <>
     <div className="topbar"><span>Professional pool care for homes and communities</span><a href="tel:6616045718"><Phone size={14} /> (661) 604-5718</a></div>
     <header className="nav-wrap"><nav className="nav container">

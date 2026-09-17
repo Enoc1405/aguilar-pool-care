@@ -23,7 +23,7 @@ export default function GaleriaPage() {
     <main className="site-shell">
       <SiteHeader />
       <PageHero 
-        eyebrow="Nuestra Galería" 
+        eyebrow="Working for you" 
         title={<>El cuidado que tu<br /><em>piscina merece.</em></>} 
         description="Explora nuestro trabajo y descubre cómo transformamos el cuidado de piscinas." 
         image="/aguilar-pool-cleaning.png" 
@@ -33,7 +33,7 @@ export default function GaleriaPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="kicker">Galería de proyectos</span>
+              <span className="kicker">Working for you</span>
               <h2>Nuestro trabajo en <em>imágenes.</em></h2>
             </div>
             <p>Una mirada completa a nuestro servicio residencial de mantenimiento y limpieza.</p>
