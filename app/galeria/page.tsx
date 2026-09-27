@@ -19,6 +19,10 @@ export default function GaleriaPage() {
   const items = files.filter((file) => !file.startsWith('.') && !file.startsWith('_')).sort()
   const imageFiles = items.filter((file) => /\.(jpe?g|png|webp)$/i.test(file))
   const videoFiles = items.filter((file) => /\.(mp4|mov|webm)$/i.test(file))
+  const galleryTabs = [
+    { id: 'imagenes', label: `Imágenes (${imageFiles.length})`, enabled: imageFiles.length > 0 },
+    { id: 'videos', label: `Videos (${videoFiles.length})`, enabled: videoFiles.length > 0 },
+  ].filter((tab) => tab.enabled)
 
   const renderMediaGrid = (media: string[], type: 'image' | 'video') => (
     <div className="photo-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem' }}>
@@ -69,7 +73,17 @@ export default function GaleriaPage() {
             <p>Una vista completa de nuestros trabajos, limpieza, mantenimiento y atención profesional.</p>
           </div>
 
-          <div className="media-section">
+          {galleryTabs.length > 0 && (
+            <nav className="gallery-subnav" aria-label="Subsección de galería">
+              {galleryTabs.map((tab) => (
+                <a key={tab.id} href={`#${tab.id}`} className="gallery-tab">
+                  {tab.label}
+                </a>
+              ))}
+            </nav>
+          )}
+
+          <div className="media-section" id="imagenes">
             <div className="media-header">
               <h3>Imágenes</h3>
               <span>{imageFiles.length} trabajos</span>
@@ -78,7 +92,7 @@ export default function GaleriaPage() {
           </div>
 
           {videoFiles.length > 0 && (
-            <div className="media-section" style={{ marginTop: '3rem' }}>
+            <div className="media-section" id="videos" style={{ marginTop: '3rem' }}>
               <div className="media-header">
                 <h3>Videos</h3>
                 <span>{videoFiles.length} videos</span>
